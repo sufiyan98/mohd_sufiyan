@@ -20,6 +20,10 @@ body {
   cursor: default;
 }
 
+input, textarea, button {
+  user-select: auto;
+}
+
 /* Modal styles */
 .modal-container {
   position: fixed;
