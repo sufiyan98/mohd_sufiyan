@@ -295,8 +295,8 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-primary-dark">
-        <div className="container mx-auto max-w-screen-2xl px-4">
+      <section id="contact" className="pt-32 py-20 px-4 bg-primary-dark">
+        <div className="relative z-50 container mx-auto max-w-screen-2xl px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -343,7 +343,7 @@ function App() {
                 (error) => alert('Failed to send message: ' + error.text)
               );
             }}
-            className="w-full max-w-full px-4 sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto flex flex-col gap-4"
+            className="w-full z-50 max-w-full px-4 sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto flex flex-col gap-4"
           >
             <input
               type="text"
