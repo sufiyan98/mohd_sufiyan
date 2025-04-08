@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import myImage from './images/MyImage.png';
+import myResearchAssistant from './images/aiassistant.png';
+import loan from './images/loanapproval.png';
+import videocall from './images/videocall.png';
+
 
 function Typewriter({
   texts,
@@ -89,19 +94,19 @@ function App() {
     {
       title: 'Loan Approval Automation',
       description: 'Automated loan approval system using machine learning algorithms and Spring Boot microservices.',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600',
+      image: loan,
       sourceCode: 'https://github.com/sufiyan98/Loan-Approval-Automation-System',
     },
     {
       title: 'Research Assistant – AI',
       description: 'AI-powered research assistant that helps researchers find and analyze academic papers.',
-      image: '/src/images/ai assistant.png',
+      image: myResearchAssistant,
       sourceCode: 'https://github.com/sufiyan98/Research-Assistant-SpringBoot',
     },
     {
       title: 'Video Call Application',
       description: 'Real-time video calling application built with WebRTC and Spring Boot.',
-      image: 'https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=600',
+      image: videocall,
       sourceCode: 'https://github.com/sufiyan98/Video-Call-App',
     },
   ];
@@ -133,23 +138,23 @@ function App() {
                   'Backend Developer . . .',
                   'Web Developer . . .',
                 ]}
-                speed={110}
-                pause={1500}
+                speed={80}
+                pause={800}
               />
             </h2>
             <div className="relative z-50 flex gap-4 justify-center lg:justify-start mb-6">
 <a
-  href="https://drive.google.com/file/d/10M7YoWPheW_ryojts2enRrSW2ov_8Rcc/view"
+  href="https://drive.google.com/file/d/1hFSOdNH6T-ITv0JUURoANdLg4_-wCfrs/view?usp=sharing"
   target="_blank"
   rel="noopener noreferrer"
-  className="inline-block w-fit bg-accent text-primary-dark px-6 py-3 rounded-lg flex items-center gap-2 border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-300 hover:scale-105"
+  className="inline-block w-fit bg-accent text-primary-dark px-6 py-3 rounded-lg flex items-center gap-2 border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-200 hover:scale-105"
 >
   <Download size={20} /> Download CV
 </a>
 <Link
   to="contact"
   smooth={true}
-  className="border-2 border-accent text-accent px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-accent hover:text-primary-dark transition-all duration-300 hover:scale-105 cursor-pointer"
+  className="border-2 border-accent text-accent px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-accent hover:text-primary-dark transition-all duration-200 hover:scale-105 cursor-pointer"
 >
   <Mail size={20} /> Contact Info
 </Link>
@@ -167,10 +172,10 @@ function App() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="relative z-50 lg:w-1/2 mb-10 lg:mb-0"
+            className=" lg:w-1/2 mb-10 lg:mb-0"
           >
             <img
-              src="/src/images/MyImage.png"
+              src={myImage}
               alt="Mohammed Sufiyan"
               className="rounded-full w-40 h-40 sm:w-64 sm:h-64 lg:w-96 lg:h-96 object-cover mx-auto shadow-lg border-4 border-accent"
             />
@@ -275,11 +280,16 @@ function App() {
             ))}
           </div>
           <div className="relative z-20 text-center mt-12">
-          <a href="https://github.com/sufiyan98?tab=repositories" target="_blank" rel="noopener noreferrer">
-  <button className="bg-accent text-primary-dark px-6 py-3 rounded-lg flex items-center gap-2 border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-300 mx-auto hover:scale-105">
+           <a href="https://github.com/sufiyan98" target="_blank" rel="noopener noreferrer">
+  <button className="bg-accent text-primary-dark px-6 py-3 rounded-lg flex items-center gap-2 border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-200 mx-auto hover:scale-105">
     <ExternalLink size={20} /> Explore All
   </button>
-</a>
+</a> 
+
+
+
+
+
           </div>
         </div>
       </section>
@@ -314,7 +324,7 @@ function App() {
               LinkedIn Profile
             </a>
           </div>
-          <form
+          <form 
             onSubmit={(e) => {
               e.preventDefault();
               const form = e.target as HTMLFormElement;
@@ -322,10 +332,6 @@ function App() {
               const email = (form.querySelector('input[name="email"]') as HTMLInputElement).value.trim();
               const message = (form.querySelector('textarea[name="message"]') as HTMLTextAreaElement).value;
 
-              if (!name || !email) {
-                alert('Name and Email cannot be blank.');
-                return;
-              }
 
               emailjs.send(
                 'service_ltzzq0l',
@@ -344,19 +350,22 @@ function App() {
               name="name"
               placeholder="Your Name"
               className="w-full px-4 py-3 rounded-lg bg-primary-light text-accent-light border border-accent/30 focus:outline-none focus:border-accent transition-all duration-300"
+              required
             />
             <input
               type="email"
               name="email"
               placeholder="Your Email"
               className="w-full px-4 py-3 rounded-lg bg-primary-light text-accent-light border border-accent/30 focus:outline-none focus:border-accent transition-all duration-300"
-            />
+              required
+           />
             <textarea
               name="message"
               placeholder="Your Message"
               rows={5}
               className="w-full px-4 py-3 rounded-lg bg-primary-light text-accent-light border border-accent/30 focus:outline-none focus:border-accent transition-all duration-300"
-            ></textarea>
+              required
+           ></textarea>
             <button
               type="submit"
               className="relative z-20 px-6 py-3 rounded-lg border-2 border-accent text-accent hover:bg-accent hover:text-primary-dark transition-all duration-300 hover:scale-105 mx-auto"

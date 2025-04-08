@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, so
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="relative z-50 bg-primary-dark rounded-lg overflow-hidden shadow-md border border-accent/20"
+      className=" bg-primary-dark rounded-lg overflow-hidden shadow-md border border-accent/20"
     >
       <img src={image} alt={title} className=" w-full h-48 object-cover" />
       <div className="p-6">
@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, so
             href={sourceCode}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg flex items-center gap-2 border-2 border-accent text-accent hover:bg-accent hover:text-primary-dark transition-all duration-300 hover:scale-105"
+            className="px-4 z-20 py-2 rounded-lg flex items-center gap-2 border-2 border-accent text-accent hover:bg-accent hover:text-primary-dark transition-all duration-200"
           >
             <Github size={20} />
             Source Code

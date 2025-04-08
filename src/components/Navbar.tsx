@@ -90,7 +90,7 @@ const Navbar = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://drive.google.com/file/d/10M7YoWPheW_ryojts2enRrSW2ov_8Rcc/view"
+              href="https://drive.google.com/file/d/1hFSOdNH6T-ITv0JUURoANdLg4_-wCfrs/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-4 bg-accent text-primary-dark px-4 py-2 rounded-lg hover:bg-accent-light transition-colors"
@@ -121,7 +121,7 @@ const Navbar = () => {
           </motion.button>
 
           {menuOpen && (
-            <div className="absolute top-full left-0 w-full bg-primary-dark flex flex-col items-center gap-4 py-4 md:hidden z-40">
+            <div className="absolute top-full left-0 w-full bg-primary-dark flex flex-col items-center gap-4 py-4 md:hidden z-[999]">
               {['About', 'Experience', 'Projects', 'Contact'].map((item) => (
                 <NavLink key={item} to={item.toLowerCase()}>
                   {item}

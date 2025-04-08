@@ -5,7 +5,7 @@ import * as random from 'maath/random';
 
 function Stars() {
   const ref = useRef<any>();
-  const sphere = new Float32Array(random.inSphere(new Float32Array(5000), { radius: 1.9 }));
+  const sphere = new Float32Array(random.inSphere(new Float32Array(5000), { radius: 5 }));
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -17,10 +17,10 @@ function Stars() {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
-          color="#aaa"
-          size={0.01}
+          color="#ffffff"
+          size={0.009}
           sizeAttenuation={true}
-          depthWrite={false}
+          depthWrite={true}
         />
       </Points>
     </group>
