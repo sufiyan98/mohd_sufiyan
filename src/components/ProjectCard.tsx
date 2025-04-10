@@ -16,7 +16,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, so
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className=" bg-primary-dark rounded-lg overflow-hidden shadow-md border border-accent/20"
+      className=" bg-primary-dark rounded-lg overflow-hidden shadow-md border border-accent/20 "
+
     >
       <img src={image} alt={title} className=" w-full h-48 object-cover" />
       <div className="p-6">
