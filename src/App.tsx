@@ -120,7 +120,7 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 relative">
 <motion.div 
-  className="container mx-auto max-w-screen-2xl px-4 flex flex-col-reverse lg:flex-row items-center justify-between"
+  className="container mx-auto max-w-screen-2xl px-4 flex flex-col-reverse lg:flex-row items-center justify-between "
           style={{ scale: heroScale, opacity: heroOpacity, y: heroY }}
         >
           <motion.div 
@@ -377,7 +377,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-50 bg-primary-light py-8 px-4">
+      <footer className="relative z-50 bg-primary-light py-8 px-4 opacity-50">
         <div className="container mx-auto max-w-screen-2xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <nav className="flex gap-6 mb-6 md:mb-0">
