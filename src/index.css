@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme variables */
+:root {
+  --color-primary-dark: #17181D;
+  --color-primary-light: #292C35;
+  --color-accent: #E09145;
+  --color-accent-light: #FCD9B8;
+  --color-text-main: #FCD9B8;
+  --color-card-bg: #292C35;
+  --color-button-bg: #E09145;
+  --color-button-text: #17181D;
+}
+
+/* Alternate theme */
+.theme-alt {
+  --color-primary-dark: #EDE6D9;      /* background */
+  --color-primary-light: #B39977;     /* card/secondary bg */
+  --color-accent: #684F36;            /* accent, button bg */
+  --color-accent-light: #342519;      /* accent text/borders */
+  --color-text-main: #342519;         /* main text */
+  --color-card-bg: #fff;              /* card background (off-white for contrast) */
+  --color-button-bg: #684F36;         /* button background */
+  --color-button-text: #EDE6D9;       /* button text */
+}
+
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -22,6 +46,13 @@ body {
 
 input, textarea, button {
   user-select: auto;
+}
+
+/* Make placeholder color match input text color */
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  opacity: 1;
 }
 
 /* Modal styles */
@@ -169,7 +200,3 @@ input, textarea, button {
   stroke-dashoffset: 180;
   transform: scaleY(-1);
 }
-
-
-
-

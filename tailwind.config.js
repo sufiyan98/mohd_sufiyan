@@ -9,13 +9,17 @@ export default {
       },
       colors: {
         primary: {
-          dark: '#17181D',
-          light: '#292C35',
+          dark: 'var(--color-primary-dark)',
+          light: 'var(--color-primary-light)',
         },
         accent: {
-          DEFAULT: '#E09145',
-          light: '#FCD9B8',
+          DEFAULT: 'var(--color-accent)',
+          light: 'var(--color-accent-light)',
         },
+        'text-main': 'var(--color-text-main)',
+        'card-bg': 'var(--color-card-bg)',
+        'button-bg': 'var(--color-button-bg)',
+        'button-text': 'var(--color-button-text)',
       },
     },
   },
