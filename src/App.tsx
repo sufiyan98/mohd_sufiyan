@@ -134,7 +134,7 @@ function App() {
             <h2 className="text-xl lg:text-2xl text-accent/80 mb-6">
               <Typewriter
                 texts={[
-                  'Java Full Stack Developer . . .',
+                  'Java Developer . . .',
                   'Backend Developer . . .',
                   'Web Developer . . .',
                 ]}
@@ -144,7 +144,7 @@ function App() {
             </h2>
             <div className="relative z-50 flex gap-4 justify-center lg:justify-start mb-6">
 <a
-  href="https://drive.google.com/file/d/1hFSOdNH6T-ITv0JUURoANdLg4_-wCfrs/view?usp=sharing"
+  href="https://drive.google.com/file/d/16rE1e334xByep3DJoF0Hd_RaDRcFKkJN/view?usp=sharing"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-block w-fit bg-accent text-primary-dark px-6 py-3 rounded-lg flex items-center gap-2 border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-200 hover:scale-105"

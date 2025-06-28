@@ -165,7 +165,7 @@ const Navbar = () => {
                   </NavLink>
                 ))}
                 <a
-                  href="https://drive.google.com/file/d/1hFSOdNH6T-ITv0JUURoANdLg4_-wCfrs/view?usp=sharing"
+                  href="https://drive.google.com/file/d/16rE1e334xByep3DJoF0Hd_RaDRcFKkJN/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-accent text-primary-dark px-4 py-2 rounded-lg hover:bg-accent-light transition-colors border-2 border-accent"
