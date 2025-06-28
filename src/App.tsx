@@ -70,12 +70,22 @@ function App() {
 
   const backendSkills = [
     { name: 'Java (Advanced)', level: 'Intermediate', icon: Server },
+<<<<<<< HEAD
     { name: 'MySQL', level: 'Intermediate', icon: Database },
     { name: 'Spring MVC', level: 'Intermediate', icon: Server },
     { name: 'Spring Boot', level: 'Intermediate', icon: Server },
     { name: 'Microservices Architecture', level: 'Intermediate', icon: Server },
     { name: 'Spring Data JPA', level: 'Intermediate', icon: Database },
     { name: 'Hibernate', level: 'Intermediate', icon: Database },
+=======
+     { name: 'Spring Boot', level: 'Intermediate', icon: Server },
+     { name: 'Microservices Architecture', level: 'Intermediate', icon: Server },
+     { name: 'MySQL', level: 'Intermediate', icon: Database },
+     { name: 'Spring Data JPA', level: 'Intermediate', icon: Database },
+    { name: 'MongoDB', level: 'Intermediate', icon: Database },
+    { name: 'Docker', level: 'Intermediate', icon: Server },
+   
+>>>>>>> 22caf20 (Updated resume)
   ];
 
   const frontendSkills = [
