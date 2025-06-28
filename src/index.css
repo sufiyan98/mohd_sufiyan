@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables */
+:root {
+  --color-primary-dark: #17181D;
+  --color-primary-light: #292C35;
+  --color-accent: #E09145;
+  --color-accent-light: #FCD9B8;
+  --color-text-main: #FCD9B8;
+  --color-card-bg: #292C35;
+  --color-button-bg: #E09145;
+  --color-button-text: #17181D;
+}
+
+/* Alternate theme */
+.theme-alt {
+  --color-primary-dark: #EDE6D9;      /* background */
+  --color-primary-light: #B39977;     /* card/secondary bg */
+  --color-accent: #684F36;            /* accent, button bg */
+  --color-accent-light: #342519;      /* accent text/borders */
+  --color-text-main: #342519;         /* main text */
+  --color-card-bg: #fff;              /* card background (off-white for contrast) */
+  --color-button-bg: #684F36;         /* button background */
+  --color-button-text: #EDE6D9;       /* button text */
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+body {
+  user-select: none;
+  cursor: default;
+}
+
+input, textarea, button {
+  user-select: auto;
+}
+
+/* Make placeholder color match input text color */
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+/* Modal styles */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 40%, 0.6);
+}
+
+.modal-container.show {
+  display: flex;
+}
+
+.modal {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  color: white;
+  background: linear-gradient(to right bottom, hsl(236, 50%, 50%), hsl(195, 50%, 50%));
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  position: relative;
+}
+
+.modal__details {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+}
+
+.modal__title {
+  font-size: 2rem;
+}
+
+.modal__description {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.modal__text {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.modal__btn,
+.modal__close {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid hsla(0, 0%, 100%, 0.4);
+  border-radius: 100rem;
+  color: inherit;
+  background: transparent;
+  font-size: 1.2rem;
+  font-family: inherit;
+  letter-spacing: 0.1rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.modal__btn:hover,
+.modal__btn:focus,
+.modal__close:hover,
+.modal__close:focus {
+  border-color: hsla(0, 0%, 100%, 0.6);
+  transform: translateY(-0.2rem);
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__close::before {
+  content: '×';
+  font-size: 1.6rem;
+}
+
+.blinking-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* From Uiverse.io by SelfMadeSystem */ 
+/* The switch - the box around the slider */
+.switch {
+  --a: 0.5s ease-out;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  height: 2em;
+  border-radius: 2em;
+  box-shadow: 0 0 0 0.66em #aaa;
+  aspect-ratio: 212.4992/84.4688;
+  background-color: #aaa;
+}
+
+/* Hide default HTML checkbox */
+#check {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch svg {
+  height: 100%;
+}
+
+.switch svg path {
+  color: #fff;
+  stroke-width: 16;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 136 224;
+  transition:
+    all var(--a),
+    0s transform;
+  transform-origin: center;
+}
+
+#check:checked ~ .switch svg path {
+  stroke-dashoffset: 180;
+  transform: scaleY(-1);
+}
